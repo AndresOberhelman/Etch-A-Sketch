@@ -1,0 +1,9 @@
+.row{
+    display: flex;
+    flex-direction: row;;
+}
+
+.square:hover{
+    background-color:black;
+
+}
