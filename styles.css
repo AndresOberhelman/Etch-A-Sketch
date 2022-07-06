@@ -2,6 +2,7 @@
   width:500px;
   height: 500px;
   display: grid;
+  outline: auto;
 }
 
 body{
@@ -12,4 +13,22 @@ body{
 
 body{
   background-color: aqua;
+}
+
+.buttons{
+  display: flex;
+  text-align: center;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.mode{
+  text-align: center;
 }

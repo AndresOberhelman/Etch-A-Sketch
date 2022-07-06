@@ -1,5 +1,5 @@
 let color = "black";
-let click=true;
+let click = true;
 function populateBoard(size){
   let board = document.querySelector(".board");
   let squares=board.querySelectorAll('div');
@@ -12,6 +12,7 @@ function populateBoard(size){
     square.addEventListener('mouseover',colorSquare)
     square.style.backgroundColor = "white";
     board.insertAdjacentElement("beforeend", square);
+    square.style.border="black";
   }
 
 }
@@ -26,14 +27,14 @@ function changeSize(input){
 }
 
 function colorSquare(){
-  
+  if(click){
   if(color=='random'){
     this.style.backgroundColor=`hsl(${Math.random() * 360}, 100%, 50%)`;
   } else{
     this.style.backgroundColor=color;
   }
-}
-
+  }
+ }
 function changeColor(choice){
  color=choice;
 }
@@ -44,6 +45,11 @@ function resetBoard(){
   squares.forEach((div)=>div.style.backgroundColor='white');
 }
 
-document.querySelector('body').addEventListener('click',() =>{
-  click=!click;
+document.querySelector("body").addEventListener("click",() =>{
+  click = !click;
+  if(click){
+    document.querySelector(".mode").textContent="Mode: Coloring"
+  }else{
+    document.querySelector(".mode").textContent="Mode: Not Coloring"
+  }
 });

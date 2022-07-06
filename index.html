@@ -10,6 +10,7 @@
   <body>
     <div class="flex-container">
       <div class="title"><h1>Etch-A-Sketch</h1></div>
+      <div class="mode">Mode: Coloring</div>
       <div class="content">
         <div class="board"></div>
         <div class="buttons">
@@ -17,10 +18,10 @@
           <button onclick="changeColor('white')">Erasor</button>
           <button onclick="changeColor('gray')">Gray</button>
           <button onclick="changeColor('random')">Random</button>
-          <button>Reset</button>
+          <button onclick="resetBoard()">Reset</button>
         </div>
         <div>
-          <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
+          <input class="size" type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
           <button>Set Size</button>
         </div>
       </div>
