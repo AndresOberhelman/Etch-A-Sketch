@@ -1,9 +1,5 @@
-.row{
-    display: flex;
-    flex-direction: row;;
-}
-
-.square:hover{
-    background-color:black;
-
+.board{
+    width: 500px;
+    height:500px;
+    display:grid;
 }
